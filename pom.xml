@@ -38,6 +38,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
+                    <finalName>status-checker</finalName>
                     <archive>
                         <manifest>
                             <mainClass>com.romanvlasenko.statuschecker.StatusCheckerApp</mainClass>
