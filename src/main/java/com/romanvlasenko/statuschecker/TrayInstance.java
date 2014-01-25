@@ -1,12 +1,9 @@
 package com.romanvlasenko.statuschecker;
 
-import com.romanvlasenko.statuschecker.image.ImageUtil;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Observable;
@@ -21,8 +18,8 @@ public class TrayInstance implements Observer {
   private HashMap<String, MenuItem> urlMenuItems = new HashMap<>();
 
   public static final int IMG_SIZE_FACTOR = 2;
-  private Image statusGreenImg = createImage("resources/green.png");
-  private Image statusRedImg = createImage("resources/red.png");
+  private Image statusGreenImg = createImage("images/green.png");
+  private Image statusRedImg = createImage("images/red.png");
 
   private final static String UP = "[OK] ";
   private final static String DOWN = "[NA] ";
@@ -87,7 +84,7 @@ public class TrayInstance implements Observer {
   private Image createImage(String fileName) {
     BufferedImage img = null;
     try {
-      img = ImageIO.read(new File(fileName));
+      img = ImageIO.read(getClass().getResourceAsStream(fileName));
     } catch (IOException e) {
       e.printStackTrace();
     }

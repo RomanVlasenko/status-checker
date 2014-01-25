@@ -1,4 +1,4 @@
-package com.romanvlasenko.statuschecker.image;
+package com.romanvlasenko.statuschecker;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
