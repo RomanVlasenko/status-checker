@@ -7,4 +7,4 @@ Shows tray icon with aggregated result. Red if one of URLs is not available and 
 # Howto
 1. Build app using Maven
 2. Change settings.conf
-3. Run with command 'java -jar status-checker'
+3. Run with command 'java -jar status-checker.jar'
